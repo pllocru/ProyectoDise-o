@@ -1,53 +1,585 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Web Personalizada</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cypher Security</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/custom.css">
 </head>
-<body>
-    <header class="bg-primary text-white text-center py-3">
-        <h1>Mi Web Personalizada</h1>
-    </header>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Inicio</a>
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/foto.jpg" class="img-fluid me-2" alt="logo" style="height: 40px;">
+                CYPHER SECURITY
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown me-3"> <!-- Agregada separación -->
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarInicio" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Inicio
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarInicio">
+                            <li><a class="dropdown-item" href="index.html">Principio</a></li>
+                            <li><a class="dropdown-item" href="index.html#por-que-nosotros">¿Por qué nosotros?</a></li>
+                            <li><a class="dropdown-item" href="index.html#proceso">Proceso</a></li>
+                            <li><a class="dropdown-item" href="index.html#testimonios">Nuestros clientes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item me-3"><a class="nav-link" href="Servicios.html">Servicios</a></li>
+                    <!-- Separación -->
+                    <li class="nav-item me-3"><a class="nav-link" href="Nuestraempresa.html">Nuestra empresa</a></li>
+                    <!-- Separación -->
                 </ul>
+                <!-- Espaciado adicional para el botón de contacto -->
+                <a class="nav-link btn-contacto ms-4" href="#" data-bs-toggle="modal" data-bs-target="#modalContacto">
+                    Contacto
+                </a>
             </div>
         </div>
     </nav>
 
-    <main class="container my-4">
-        <div class="row">
-            <div class="col-md-8">
-                <h2>Bienvenidos a mi sitio</h2>
-                <p>Esta es una web personalizada utilizando Bootstrap.</p>
+
+
+    <!-- Agregar el modal de contacto -->
+    <div class="modal fade" id="modalContacto" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content"
+                style="background: var(--cyber-black); color: white; border: 1px solid var(--neon-blue);">
+                <div class="modal-header" style="border-bottom: 1px solid var(--neon-blue);">
+                    <h5 class="modal-title" style="color: var(--neon-blue);">Contáctanos</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer" style="border-top: 1px solid var(--neon-blue);">
+                    <button type="button" class="btn btn-cyber" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-cyber">Enviar Mensaje</button>
+                </div>
             </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Sección destacada</h5>
-                        <p class="card-text">Contenido adicional de interés.</p>
+        </div>
+    </div>
+
+
+    <section class="parallax-section hero-section" id="inicio">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Columna de Texto (Izquierda) -->
+                <div class="col-md-6 text-start">
+                    <h1 class="display-2 mb-4">Protección Digital Avanzada</h1>
+                    <p class="lead mb-4" style="font-size: 1.5rem;">
+                        Expertos en ciberseguridad protegiendo tu presente y futuro digital
+                    </p>
+                    <a href="#" class="btn btn-cyber btn-lg">Solicita una Evaluación Gratuita</a>
+                </div>
+
+                <!-- Columna de Carrusel (Derecha) -->
+                <div class="col-md-6 text-center">
+                    <div id="carouselCiberseguridad" class="carousel slide mb-5" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselCiberseguridad" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselCiberseguridad" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselCiberseguridad" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="carousel-image-container">
+                                    <img src="images/consultoria.jpg" alt="Inteligencia Artificial"
+                                        class="d-block w-100">
+                                </div>
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Inteligencia Artificial</h5>
+                                    <p>Tecnología avanzada para tu protección</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-image-container">
+                                    <img src="images/ethical.jpg" alt="Seguridad de Redes" class="d-block w-100">
+                                </div>
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Seguridad de Redes</h5>
+                                    <p>Soluciones robustas para empresas</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-image-container">
+                                    <img src="images/cloud.jpg" alt="Protección de Datos" class="d-block w-100">
+                                </div>
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Protección de Datos</h5>
+                                    <p>Salvaguardando tu información crítica</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCiberseguridad"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselCiberseguridad"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 Mi Web - Todos los derechos reservados</p>
+
+    <!-- NUEVA SECCIÓN: Por qué nosotros con imágenes alternadas -->
+    <section id="por-que-nosotros" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">¿Por qué elegir Cypher Security?</h2>
+
+            <!-- Primera fila: Imagen izquierda, texto derecha -->
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6">
+                    <img src="/images/equipociber.webp" alt="Equipo de expertos" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6">
+                    <h3 class="h3 mb-4" style="color: var(--neon-blue);">Equipo de élite en ciberseguridad</h3>
+                    <p class="lead">Contamos con profesionales certificados con más de 15 años de experiencia en el
+                        sector, formados en las mejores instituciones y con reconocimiento internacional.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--neon-blue);"></i>
+                            Certificaciones CISSP, CEH, OSCP y CISM</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--neon-blue);"></i>
+                            Experiencia en sectores críticos</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--neon-blue);"></i>
+                            Formación continua y actualización permanente</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Segunda fila: Texto izquierda, imagen derecha -->
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6 order-md-2">
+                    <img src="images/iarobots.webp" alt="Tecnología avanzada" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h3 class="h3 mb-4" style="color: var(--neon-blue);">Tecnología de vanguardia</h3>
+                    <p class="lead">Implementamos las soluciones más avanzadas del mercado, desarrolladas internamente y
+                        optimizadas para cada cliente.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--neon-blue);"></i>
+                            Sistemas de detección temprana con IA</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--neon-blue);"></i>
+                            Protocolos de cifrado de última generación</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--neon-blue);"></i>
+                            Infraestructura redundante y monitorización 24/7</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tercera fila: Imagen izquierda, texto derecha -->
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="images/metodologia.webp" alt="Metodología probada" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6">
+                    <h3 class="h3 mb-4" style="color: var(--neon-blue);">Metodología probada y eficaz</h3>
+                    <p class="lead">Nuestro enfoque sistemático garantiza una protección integral adaptada a las
+                        necesidades específicas de cada organización.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--neon-blue);"></i>
+                            Evaluación personalizada de riesgos</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--neon-blue);"></i>
+                            Implementación de soluciones a medida</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--neon-blue);"></i>
+                            Monitorización continua y mejora permanente</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: Proceso -->
+    <section id="proceso" class="py-5"
+        style="background: linear-gradient(45deg, rgba(0, 51, 102, 0.9), rgba(13, 17, 23, 0.9));">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Nuestro Proceso</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row">
+                        <!-- Paso 1 -->
+                        <div class="col-md-3 text-center mb-4">
+                            <div class="process-step">
+                                <div class="process-icon mb-3"
+                                    style="background-color: var(--cyber-black); border: 2px solid var(--neon-blue); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                                    <span style="color: var(--neon-blue); font-size: 2rem;">1</span>
+                                </div>
+                                <h5 style="color: var(--neon-blue);">Diagnóstico</h5>
+                                <p class="text-light">Evaluación completa de vulnerabilidades y análisis de riesgos</p>
+                            </div>
+                        </div>
+                        <!-- Paso 2 -->
+                        <div class="col-md-3 text-center mb-4">
+                            <div class="process-step">
+                                <div class="process-icon mb-3"
+                                    style="background-color: var(--cyber-black); border: 2px solid var(--neon-blue); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                                    <span style="color: var(--neon-blue); font-size: 2rem;">2</span>
+                                </div>
+                                <h5 style="color: var(--neon-blue);">Planificación</h5>
+                                <p class="text-light">Estrategia personalizada de protección y respuesta</p>
+                            </div>
+                        </div>
+                        <!-- Paso 3 -->
+                        <div class="col-md-3 text-center mb-4">
+                            <div class="process-step">
+                                <div class="process-icon mb-3"
+                                    style="background-color: var(--cyber-black); border: 2px solid var(--neon-blue); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                                    <span style="color: var(--neon-blue); font-size: 2rem;">3</span>
+                                </div>
+                                <h5 style="color: var(--neon-blue);">Implementación</h5>
+                                <p class="text-light">Despliegue de soluciones de seguridad avanzadas</p>
+                            </div>
+                        </div>
+                        <!-- Paso 4 -->
+                        <div class="col-md-3 text-center mb-4">
+                            <div class="process-step">
+                                <div class="process-icon mb-3"
+                                    style="background-color: var(--cyber-black); border: 2px solid var(--neon-blue); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                                    <span style="color: var(--neon-blue); font-size: 2rem;">4</span>
+                                </div>
+                                <h5 style="color: var(--neon-blue);">Monitorización</h5>
+                                <p class="text-light">Vigilancia continua y optimización permanente</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="#" class="btn btn-cyber">Comienza Hoy Mismo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: Testimonios -->
+    <section id="testimonios" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Lo que dicen nuestros clientes</h2>
+            <div class="row">
+                <!-- Testimonio 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100"
+                        style="background-color: var(--cyber-dark); border: 1px solid var(--neon-blue);">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-center mb-3">
+                                <div style="color: var(--neon-blue);">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="card-text text-light fst-italic">"Después de sufrir un ataque de ransomware,
+                                Cypher Security nos ayudó a recuperar nuestros sistemas y a implementar medidas de
+                                protección que han evitado nuevos incidentes."</p>
+                            <div class="text-center mt-3">
+                                <h6 class="card-subtitle mb-1" style="color: var(--neon-blue);">Carlos Martínez</h6>
+                                <p class="small text-light">Director IT, Industrias GlobaTech</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonio 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100"
+                        style="background-color: var(--cyber-dark); border: 1px solid var(--neon-blue);">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-center mb-3">
+                                <div style="color: var(--neon-blue);">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="card-text text-light fst-italic">"Su servicio de monitorización continua nos ha
+                                permitido detectar y neutralizar amenazas antes de que afectaran nuestras operaciones.
+                                Un equipo altamente profesional."</p>
+                            <div class="text-center mt-3">
+                                <h6 class="card-subtitle mb-1" style="color: var(--neon-blue);">Elena Sánchez</h6>
+                                <p class="small text-light">CEO, Fintech Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonio 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100"
+                        style="background-color: var(--cyber-dark); border: 1px solid var(--neon-blue);">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-center mb-3">
+                                <div style="color: var(--neon-blue);">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                            <p class="card-text text-light fst-italic">"Implementaron una solución a medida para nuestra
+                                infraestructura cloud. Su enfoque personalizado y atención al detalle marcaron la
+                                diferencia."</p>
+                            <div class="text-center mt-3">
+                                <h6 class="card-subtitle mb-1" style="color: var(--neon-blue);">Miguel Ortega</h6>
+                                <p class="small text-light">CTO, NubeSeg</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: Call to Action -->
+    <section id="informate" class="py-5"
+        style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1920/600'); background-size: cover; background-position: center;">
+        <div class="container text-center py-5">
+            <h2 class="display-4 mb-4" style="color: var(--neon-blue);">¿Listo para proteger tu empresa?</h2>
+            <p class="lead mb-4 text-white">No esperes a ser víctima de un ataque. Protege tu información y activos
+                digitales hoy mismo.</p>
+            <div class="mt-5">
+                <a href="#" class="btn btn-cyber btn-lg me-3" data-bs-toggle="modal"
+                    data-bs-target="#modalContacto">Solicitar una Evaluación</a>
+                <a href="#" class="btn btn-outline-light btn-lg">Conocer más</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Seguridad Cloud -->
+    <div class="modal fade" id="modalEthicalHacking" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content"
+                style="background: var(--cyber-black); color: white; border: 1px solid var(--neon-blue);">
+                <div class="modal-header" style="border-bottom: 1px solid var(--neon-blue);">
+                    <h5 class="modal-title" style="color: var(--neon-blue);">Ethical Hacking</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/ethical.jpg" class="img-fluid mb-3" alt="Ethical Hacking">
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-white mb-3">Servicios Incluidos:</h6>
+                            <ul class="text-light">
+                                <li>Pruebas de penetración (Pentesting)</li>
+                                <li>Análisis de vulnerabilidades</li>
+                                <li>Auditorías de seguridad</li>
+                                <li>Evaluación de riesgos</li>
+                                <li>Tests de ingeniería social</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h6 class="text-white mb-3">Metodología:</h6>
+                        <p>Nuestro enfoque de ethical hacking sigue las mejores prácticas internacionales:</p>
+                        <ol class="text-light">
+                            <li>Reconocimiento y planificación</li>
+                            <li>Escaneo y análisis</li>
+                            <li>Explotación controlada</li>
+                            <li>Post-explotación y documentación</li>
+                            <li>Reporte y recomendaciones</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border-top: 1px solid var(--neon-blue);">
+                    <button type="button" class="btn btn-cyber" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="#contacto" class="btn btn-cyber" data-bs-dismiss="modal">Solicitar Servicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Ciberinteligencia -->
+    <div class="modal fade" id="modalCiberinteligencia" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content"
+                style="background: var(--cyber-black); color: white; border: 1px solid var(--neon-blue);">
+                <div class="modal-header" style="border-bottom: 1px solid var(--neon-blue);">
+                    <h5 class="modal-title" style="color: var(--neon-blue);">Ciberinteligencia</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/inteligencia.jpg" class="img-fluid mb-3" alt="Ciberinteligencia">
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-white mb-3">Características del Servicio:</h6>
+                            <ul class="text-light">
+                                <li>Monitorización 24/7 de amenazas</li>
+                                <li>Análisis de tendencias y patrones</li>
+                                <li>Detección temprana de amenazas</li>
+                                <li>Informes personalizados</li>
+                                <li>Alertas en tiempo real</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h6 class="text-white mb-3">Beneficios:</h6>
+                        <ul class="text-light">
+                            <li>Anticipación a posibles ataques</li>
+                            <li>Reducción del tiempo de respuesta</li>
+                            <li>Protección proactiva</li>
+                            <li>Análisis de riesgos específicos del sector</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border-top: 1px solid var(--neon-blue);">
+                    <button type="button" class="btn btn-cyber" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="#contacto" class="btn btn-cyber" data-bs-dismiss="modal">Solicitar Servicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-white">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h4 class="mb-4" style="color: var(--neon-blue);">CYPHER SECURITY</h4>
+                    <p>Líderes en ciberseguridad y protección digital con más de una década de experiencia protegiendo a
+                        empresas de todos los tamaños.</p>
+                    <div class="mt-3">
+                        <a href="#" class="me-2 text-white"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="me-2 text-white"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="me-2 text-white"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                    <h5 class="mb-4" style="color: var(--neon-blue);">Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#inicio" class="text-white text-decoration-none">Inicio</a></li>
+                        <li class="mb-2"><a href="#servicios" class="text-white text-decoration-none">Servicios</a></li>
+                        <li class="mb-2"><a href="#por-que-nosotros" class="text-white text-decoration-none">¿Por qué
+                                nosotros?</a></li>
+                        <li class="mb-2"><a href="#proceso" class="text-white text-decoration-none">Proceso</a></li>
+                        <li class="mb-2"><a href="#testimonios" class="text-white text-decoration-none">Testimonios</a>
+                        </li>
+                        <li class="mb-2"><a href="#contacto" class="text-white text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                    <h5 class="mb-4" style="color: var(--neon-blue);">Servicios</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#auditoria" class="text-white text-decoration-none">Auditoría de
+                                Seguridad</a></li>
+                        <li class="mb-2"><a href="#proteccion-datos" class="text-white text-decoration-none">Protección
+                                de Datos</a></li>
+                        <li class="mb-2"><a href="#firewall" class="text-white text-decoration-none">Firewall
+                                Avanzado</a></li>
+                        <li class="mb-2"><a href="#ciberseguridad"
+                                class="text-white text-decoration-none">Ciberseguridad Empresarial</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2">
+                    <h5 class="mb-4" style="color: var(--neon-blue);">Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-geo-alt"></i> 123 Calle Seguridad, Ciudad</li>
+                        <li class="mb-2"><i class="bi bi-telephone"></i> +34 900 123 456</li>
+                        <li class="mb-2"><i class="bi bi-envelope"></i> contacto@cyphersecurity.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <p class="mb-0">&copy; 2025 Cypher Security. Todos los derechos reservados.</p>
+            </div>
+        </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <script src="
+                 https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js">
+                </script>
+    <script>
+        // Contador animado
+        const counters = document.querySelectorAll('.counter');
+
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 2500;
+            const steps = 100;
+            const increment = target / steps;
+
+            let current = 0;
+            const timer = setInterval(() => {
+                current += increment;
+                counter.textContent = Math.round(current);
+
+                if (current >= target) {
+                    counter.textContent = target;
+                    clearInterval(timer);
+                }
+            }, duration / steps);
+        });
+
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let currentLocation = window.location.pathname.split("/").pop(); // Obtiene la página actual
+            let menuItems = document.querySelectorAll(".navbar-nav .nav-link"); // Enlaces principales del navbar
+            let inicioDropdown = document.querySelector("#navbarInicio"); // Botón de "Inicio"
+            let dropdownLinks = document.querySelectorAll(".dropdown-menu .dropdown-item"); // Submenús de "Inicio"
+
+            menuItems.forEach((item) => {
+                let itemHref = item.getAttribute("href");
+                if (itemHref === currentLocation) {
+                    item.classList.add("active"); // Marca activo el enlace principal
+                }
+            });
+
+            dropdownLinks.forEach((subItem) => {
+                let subHref = subItem.getAttribute("href");
+                if (subHref.includes(currentLocation) && currentLocation !== "") {
+                    inicioDropdown.classList.add("active"); // Solo marca "Inicio", NO los submenús
+                }
+            });
+        });
+
+    </script>
+
 </body>
+
 </html>

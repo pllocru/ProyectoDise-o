@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Cypher Security</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<style>
+    /* Aumentar el ancho de las tarjetas */
+    .service-card {
+        background-color: #0056b3;
+        color: white;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        width: 90%;
+        max-width: 1100px;
+    }
+
+
+    .service-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+    }
+</style>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/foto.jpg" class="img-fluid me-2" alt="logo" style="height: 40px;">
+                CYPHER SECURITY
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown me-3"> <!-- Agregada separación -->
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarInicio" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Inicio
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarInicio">
+                            <li><a class="dropdown-item" href="index.html">Principio</a></li>
+                            <li><a class="dropdown-item" href="index.html#por-que-nosotros">¿Por qué nosotros?</a></li>
+                            <li><a class="dropdown-item" href="index.html#proceso">Proceso</a></li>
+                            <li><a class="dropdown-item" href="index.html#testimonios">Nuestros clientes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item me-3"><a class="nav-link" href="Servicios.html">Servicios</a></li>
+                    <!-- Separación -->
+                    <li class="nav-item me-3"><a class="nav-link" href="Nuestraempresa.html">Nuestra empresa</a></li>
+                    <!-- Separación -->
+                </ul>
+                <!-- Espaciado adicional para el botón de contacto -->
+                <a class="nav-link btn-contacto ms-4" href="#" data-bs-toggle="modal" data-bs-target="#modalContacto">
+                    Contacto
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-5" style="margin-top: 120px;">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Nuestros Servicios</h2>
+            <div id="serviciosCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card service-card">
+                                    <img src="images/ethical.jpg" class="card-img-top" alt="Ethical Hacking">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-white">Ethical Hacking</h5>
+                                        <p class="card-text text-light">Pruebas de penetración avanzadas para detectar
+                                            vulnerabilidades.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card service-card">
+                                    <img src="images/inteligencia.jpg" class="card-img-top" alt="Ciberinteligencia">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-white">Ciberinteligencia</h5>
+                                        <p class="card-text text-light">Monitorización y análisis continuo de amenazas.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card service-card">
+                                    <img src="images/cloud.jpg" class="card-img-top" alt="Seguridad Cloud">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-white">Seguridad Cloud</h5>
+                                        <p class="card-text text-light">Protección integral para infraestructuras en la
+                                            nube.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card service-card">
+                                    <img src="images/incidentes.jpg" class="card-img-top" alt="Respuesta a Incidentes">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-white">Respuesta a Incidentes</h5>
+                                        <p class="card-text text-light">Asistencia inmediata ante ciberataques.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card service-card">
+                                    <img src="images/forense.jpg" class="card-img-top" alt="Forense Digital">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-white">Forense Digital</h5>
+                                        <p class="card-text text-light">Investigación y análisis forense de ataques.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card service-card">
+                                    <img src="images/consultoria.jpg" class="card-img-top" alt="Consultoría">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-white">Consultoría Especializada</h5>
+                                        <p class="card-text text-light">Asesoramiento en ciberseguridad y normativas.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#serviciosCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#serviciosCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Estadísticas -->
+    <section class="stats-section" id="estadisticas">
+        <div class="container text-center">
+            <h2 class="section-title">Nuestro Impacto</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="counter" data-target="2500">0</div>
+                    <p class="stat-description">Amenazas Neutralizadas</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="counter" data-target="750">0</div>
+                    <p class="stat-description">Empresas Protegidas</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="counter" data-target="99">0</div>
+                    <p class="stat-description">Tasa de Efectividad %</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="detalle-servicios" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5 text-white">Detalles de Nuestros Servicios</h2>
+
+            <!-- Primera fila -->
+            <div class="row mb-4">
+                <!-- Ethical Hacking -->
+                <div class="col-md-6 mb-4">
+                    <div class="card service-card p-4 shadow-lg h-100" id="ethical-hacking">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#00a8ff"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M4 8a4 4 0 0 1 8 0c0 1.098-.564 2.025-1.159 2.815l-1.145 1.491a1 1 0 0 1-.799.388 1 1 0 0 1-.804-.394l-1.089-1.45C6.526 10.068 6 9.114 6 8a1 1 0 0 1 1.468-.894A1 1 0 0 1 9 8a1 1 0 0 1-.716.937A1 1 0 0 1 8 8z" />
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                </svg>
+                            </div>
+                            <h3 class="mb-0">Ethical Hacking</h3>
+                        </div>
+                        <div class="ratio ratio-16x9 mb-3">
+
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/maO8_0cA7W8?si=vQrl5gd3SYntAqPT"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            Tu navegador no soporta videos HTML5.
+
+                        </div>
+                        <p>Realizamos pruebas de penetración para identificar y corregir vulnerabilidades en los
+                            sistemas de
+                            nuestros clientes...</p>
+                        <ul>
+                            <li>Evaluación de seguridad de redes y servidores</li>
+                            <li>Simulación de ataques reales</li>
+                            <li>Informe detallado con recomendaciones</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ciberinteligencia -->
+                <div class="col-md-6 mb-4">
+                    <div class="card service-card p-4 shadow-lg h-100" id="ciberinteligencia">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#00a8ff"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.25-14.75v1.5a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 1.5 0zm0 13v-1.5a.75.75 0 0 1-1.5 0v1.5a.75.75 0 0 1 1.5 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="mb-0">Ciberinteligencia</h3>
+                        </div>
+                        <div class="ratio ratio-16x9 mb-3">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/w3LEkCBBHNE?si=RaHUqCwLssc0izXy"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p>Monitorizamos y analizamos amenazas cibernéticas en tiempo real para proteger a empresas
+                            contra
+                            ataques...</p>
+                        <ul>
+                            <li>Detección proactiva de amenazas</li>
+                            <li>Análisis de tendencias en ciberseguridad</li>
+                            <li>Prevención de ataques dirigidos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segunda fila -->
+            <div class="row mb-4">
+                <!-- Seguridad Cloud -->
+                <div class="col-md-6 mb-4">
+                    <div class="card service-card p-4 shadow-lg h-100" id="seguridad-cloud">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#00a8ff"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z" />
+                                </svg>
+                            </div>
+                            <h3 class="mb-0">Seguridad Cloud</h3>
+                        </div>
+                        <div class="ratio ratio-16x9 mb-3">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/vqyuNha0Rek?si=HCRyl2Ljwyhc4U35"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p>Protegemos los entornos de nube con herramientas avanzadas de detección y prevención de
+                            intrusos...</p>
+                        <ul>
+                            <li>Auditoría de seguridad en entornos cloud</li>
+                            <li>Defensa contra ataques DDoS y ransomware</li>
+                            <li>Configuración segura de plataformas en la nube</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Respuesta a Incidentes -->
+                <div class="col-md-6 mb-4">
+                    <div class="card service-card p-4 shadow-lg h-100" id="respuesta-incidentes">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#00a8ff"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.25-11.25a.75.75 0 0 1 1.5 0v4.5a.75.75 0 0 1-1.5 0v-4.5zm.75 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                </svg>
+                            </div>
+                            <h3 class="mb-0">Respuesta a Incidentes</h3>
+                        </div>
+                        <div class="ratio ratio-16x9 mb-3">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/zjSpqNfH77c?si=uTv14ExF4lymWEQs"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p>Ofrecemos asistencia inmediata ante ciberataques con un equipo experto disponible 24/7 para
+                            minimizar el impacto y restaurar la operatividad...</p>
+                        <ul>
+                            <li>Contención y mitigación de ataques en curso</li>
+                            <li>Análisis de alcance del incidente y compromiso</li>
+                            <li>Implementación de soluciones y recuperación de sistemas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tercera fila -->
+            <div class="row">
+                <!-- Forense Digital -->
+                <div class="col-md-6 mb-4">
+                    <div class="card service-card p-4 shadow-lg h-100" id="forense-digital">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#00a8ff"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm.5 5a.5.5 0 0 1 0 1h-3a.5.5 0 0 1 0-1h3zm0 3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1 0-1h3zm0 3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1 0-1h3z" />
+                                </svg>
+                            </div>
+                            <h3 class="mb-0">Forense Digital</h3>
+                        </div>
+                        <div class="ratio ratio-16x9 mb-3">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/2s9JyChjUnA?si=4Pk4uNPE8oa9E063"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p>Investigamos a fondo los ataques cibernéticos utilizando técnicas avanzadas de análisis
+                            forense para determinar el origen, métodos y alcance del compromiso...</p>
+                        <ul>
+                            <li>Adquisición y preservación de evidencias digitales</li>
+                            <li>Análisis de malware y vectores de ataque</li>
+                            <li>Documentación para procesos legales y seguros</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Consultoría Especializada -->
+                <div class="col-md-6 mb-4">
+                    <div class="card service-card p-4 shadow-lg h-100" id="consultoria-especializada">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="me-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#00a8ff"
+                                    viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                    <path
+                                        d="M5.25 6.033h1.32c0-.781.458-1.384 1.36-1.384.685 0 1.313.343 1.313 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.007.463h1.307v-.355c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.326 0-2.786.647-2.754 2.533zm1.562 5.516c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+                                </svg>
+                            </div>
+                            <h3 class="mb-0">Consultoría Especializada</h3>
+                        </div>
+                        <div class="ratio ratio-16x9 mb-3">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/DF8Tk96Re-o?si=ekEN9PqR6zK2Ju9e"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p>Asesoramos en la implementación de estrategias de ciberseguridad y cumplimiento normativo
+                            adaptadas a cada organización...</p>
+                        <ul>
+                            <li>Desarrollo de políticas y procedimientos de seguridad</li>
+                            <li>Cumplimiento de estándares (ISO 27001, GDPR, ENS)</li>
+                            <li>Formación y concienciación para empleados</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agregar el modal de contacto -->
+    <div class="modal fade" id="modalContacto" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content"
+                style="background: var(--cyber-black); color: white; border: 1px solid var(--neon-blue);">
+                <div class="modal-header" style="border-bottom: 1px solid var(--neon-blue);">
+                    <h5 class="modal-title" style="color: var(--neon-blue);">Contáctanos</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer" style="border-top: 1px solid var(--neon-blue);">
+                    <button type="button" class="btn btn-cyber" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-cyber">Enviar Mensaje</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-4">
+        <p>&copy; 2025 Cypher Security. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Contador animado
+        const counters = document.querySelectorAll('.counter');
+
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 2500;
+            const steps = 100;
+            const increment = target / steps;
+
+            let current = 0;
+            const timer = setInterval(() => {
+                current += increment;
+                counter.textContent = Math.round(current);
+
+                if (current >= target) {
+                    counter.textContent = target;
+                    clearInterval(timer);
+                }
+            }, duration / steps);
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var tooltips = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            tooltips.map(function (tooltip) {
+                return new bootstrap.Tooltip(tooltip);
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let currentLocation = window.location.pathname.split("/").pop(); // Obtiene la página actual
+            let menuItems = document.querySelectorAll(".navbar-nav .nav-link"); // Enlaces principales del navbar
+            let inicioDropdown = document.querySelector("#navbarInicio"); // Botón de "Inicio"
+            let dropdownLinks = document.querySelectorAll(".dropdown-menu .dropdown-item"); // Submenús de "Inicio"
+
+            menuItems.forEach((item) => {
+                let itemHref = item.getAttribute("href");
+                if (itemHref === currentLocation) {
+                    item.classList.add("active"); // Marca activo el enlace principal
+                }
+            });
+
+            dropdownLinks.forEach((subItem) => {
+                let subHref = subItem.getAttribute("href");
+                if (subHref.includes(currentLocation) && currentLocation !== "") {
+                    inicioDropdown.classList.add("active"); // Solo marca "Inicio", NO los submenús
+                }
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

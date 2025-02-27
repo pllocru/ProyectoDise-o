@@ -1,0 +1,319 @@
+:root {
+    --primary-blue: #0066cc;
+    --dark-blue: #003366;
+    --cyber-black: #0d1117;
+    --neon-blue: #00c3ff;
+}
+
+body {
+    background-color: var(--cyber-black);
+    color: white;
+}
+
+.navbar {
+    background-color: rgba(13, 17, 23, 0.95) !important;
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--neon-blue) !important;
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 1.1rem;
+}
+
+.nav-link:hover {
+    color: var(--neon-blue) !important;
+}
+
+.parallax-section {
+    background-image: url('../images/ciber.jpg');
+    /* Ruta correcta de la imagen */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    position: relative;
+}
+
+/* Para navegadores móviles que no soportan `background-attachment: fixed` */
+@media (max-width: 768px) {
+    .parallax-section {
+        background-attachment: scroll;
+        /* Se asegura que el fondo siga viéndose */
+        background-size: cover;
+    }
+}
+
+.hero-section {
+    background-image: url('../images/ciber.jpg');
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0, 51, 102, 0.9), rgba(13, 17, 23, 0.9));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.service-card {
+    background-color: rgba(0, 51, 102, 0.3);
+    border: 1px solid var(--neon-blue);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 2rem;
+    min-height: 400px;
+}
+
+.service-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 0 20px var(--neon-blue);
+}
+
+.service-card .card-body {
+    padding: 2rem;
+}
+
+.stats-section {
+    background: linear-gradient(45deg, var(--dark-blue), var(--cyber-black));
+    padding: 100px 0;
+}
+
+.counter {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--neon-blue);
+    margin-bottom: 1rem;
+}
+
+.stat-description {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.contact-section {
+    background-color: var(--cyber-black);
+    padding: 100px 0;
+}
+
+.form-control {
+    background-color: rgba(0, 51, 102, 0.2);
+    border: 1px solid var(--neon-blue);
+    color: white;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-control:focus {
+    background-color: rgba(0, 51, 102, 0.3);
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 10px var(--neon-blue);
+    color: white;
+}
+
+.btn-cyber {
+    background: var(--primary-blue);
+    color: white;
+    padding: 1rem 2.5rem;
+    border: none;
+    transition: all 0.3s;
+}
+
+.btn-cyber:hover {
+    background: var(--neon-blue);
+    box-shadow: 0 0 15px var(--neon-blue);
+    color: white;
+}
+
+.section-title {
+    font-size: 3rem;
+    color: var(--neon-blue);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.carousel-item {
+    padding: 2rem;
+}
+
+.modal-content {
+    background: var(--cyber-black) !important;
+}
+
+.modal-header,
+.modal-footer {
+    border-color: var(--neon-blue) !important;
+}
+
+.modal ul li {
+    margin-bottom: 0.5rem;
+}
+
+.service-card {
+    transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+}
+
+.service-card:hover {
+    opacity: 0.9;
+}
+
+footer {
+    background-color: var(--cyber-black);
+    padding: 3rem 0;
+    border-top: 1px solid var(--neon-blue);
+}
+
+::placeholder {
+    color: white !important;
+    opacity: 1;
+    /* Asegura que el color sea visible */
+}
+
+.form-control {
+    color: white;
+    /* Para que el texto escrito también sea blanco */
+    background-color: #1a1a1a;
+    /* Opcional: cambiar el fondo del input */
+    border: 1px solid #444;
+    /* Opcional: darle un borde más elegante */
+}
+
+/* Sección del equipo con fondo azul claro */
+.team-section {
+    background: linear-gradient(45deg, rgba(0, 51, 102, 0.9), rgba(13, 17, 23, 0.9));
+    color: #ffffff;
+    /* Texto oscuro para contraste */
+    padding: 120px 0;
+    /* Asegura que el navbar no lo cubra */
+    margin-top: 80px;
+    /* Baja la sección para que no quede debajo del navbar */
+    border-radius: 15px;
+    /* Bordes redondeados para un mejor diseño */
+}
+
+/* Tarjetas de trabajadores */
+.team-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fondo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.team-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 51, 102, 0.4);
+}
+
+/* Estilo de las imágenes de los trabajadores */
+.team-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #0066cc;
+    /* Azul más oscuro */
+}
+
+/* Ajuste para que la sección no sea tapada por el navbar en móviles */
+@media (max-width: 768px) {
+    .team-section {
+        margin-top: 100px;
+    }
+}
+
+.btn-contacto {
+    background-color: #0066cc !important;
+    color: white !important;
+    padding: 8px 15px !important;
+    border-radius: 5px !important;
+    transition: background 0.3s ease-in-out !important;
+}
+
+.btn-contacto:hover {
+    background-color: #004c99 !important;
+}
+
+/* Estilo para añadir margen inferior al carrusel */
+.carousel.slide {
+    margin-bottom: 3rem;
+    /* Aumenta el espacio debajo del carrusel */
+}
+
+/* Estilo para que todas las imágenes del carrusel tengan el mismo tamaño */
+.carousel-image-container {
+    width: 100%;
+    height: 300px;
+    /* Altura fija para todas las imágenes */
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Para que la imagen cubra todo el espacio sin distorsionarse */
+    object-position: center;
+    /* Centra la imagen */
+}
+
+/* Mejora de estilo para el botón de ciberseguridad */
+.btn-cyber {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    transition: all 0.3s ease;
+}
+
+.btn-cyber:hover {
+    background-color: #34495e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.faq-card {
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    background-color: #112240;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+.navbar-nav .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2); /* Blanco con 20% de opacidad */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno */
+    transition: background-color 0.3s ease-in-out; /* Efecto de transición */
+}

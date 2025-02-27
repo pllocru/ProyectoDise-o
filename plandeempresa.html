@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cypher Security</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/foto.jpg" class="img-fluid me-2" alt="logo" style="height: 40px;">
+                CYPHER SECURITY
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#estadisticas">Impacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contactanos.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <section id="servicios" class="py-5 mt-5">
+        <div class="container">
+            <h2 class="section-title">Servicios Especializados</h2>
+            <div id="serviciosCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card service-card" style="cursor: pointer;" data-bs-toggle="modal"
+                                    data-bs-target="#modalEthicalHacking">
+                                    <img src="images/ethical.jpg" class="card-img-top" alt="Ethical Hacking">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-white">Definición del producto o servicio y del
+                                            mercado</h5>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card service-card" style="cursor: pointer;" data-bs-toggle="modal"
+                                    data-bs-target="#modalCiberinteligencia">
+                                    <img src="images/inteligencia.jpg" class="card-img-top" alt="Ciberinteligencia">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-white">Ciberinteligencia</h5>
+                                        <p class="card-text text-light">Monitorización y análisis continuo de amenazas
+                                            en tiempo real para prevenir ataques.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card service-card" style="cursor: pointer;" data-bs-toggle="modal"
+                                    data-bs-target="#modalCloud">
+                                    <img src="/api/placeholder/400/300" class="card-img-top" alt="Seguridad Cloud">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-white">Seguridad Cloud</h5>
+                                        <p class="card-text text-light">Protección integral para infraestructuras cloud
+                                            y sistemas híbridos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card service-card" style="cursor: pointer;" data-bs-toggle="modal"
+                                    data-bs-target="#modalIncidentes">
+                                    <img src="/api/placeholder/400/300" class="card-img-top"
+                                        alt="Respuesta a Incidentes">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-white">Respuesta a Incidentes</h5>
+                                        <p class="card-text text-light">Equipo especializado 24/7 para respuesta
+                                            inmediata ante incidentes de seguridad.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card service-card" style="cursor: pointer;" data-bs-toggle="modal"
+                                    data-bs-target="#modalForense">
+                                    <img src="/api/placeholder/400/300" class="card-img-top" alt="Forense Digital">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-white">Forense Digital</h5>
+                                        <p class="card-text text-light">Investigación y análisis profundo de incidentes
+                                            de seguridad.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card service-card" style="cursor: pointer;" data-bs-toggle="modal"
+                                    data-bs-target="#modalConsultoria">
+                                    <img src="/api/placeholder/400/300" class="card-img-top"
+                                        alt="Consultoría Especializada">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-white">Consultoría Especializada</h5>
+                                        <p class="card-text text-light">Asesoramiento estratégico en ciberseguridad y
+                                            cumplimiento normativo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#serviciosCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#serviciosCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Modal Ethical Hacking -->
+    <div class="modal fade" id="modalEthicalHacking" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content"
+                style="background: var(--cyber-black); color: white; border: 1px solid var(--neon-blue);">
+
+                <!-- Header -->
+                <div class="modal-header" style="border-bottom: 1px solid var(--neon-blue);">
+                    <h5 class="modal-title" style="color: var(--neon-blue);">Definición del producto o servicio y del
+                        mercado</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Body -->
+                <div class="modal-body">
+                    <div class="row align-items-center">
+
+                        <!-- Imagen -->
+                        <div class="col-md-5 text-center">
+                            <img src="images/ethical.jpg" class="img-fluid rounded shadow mb-3" alt="Ethical Hacking">
+                        </div>
+
+                        <!-- Descripción -->
+                        <div class="col-md-7">
+                            <h6 class="text-white fw-bold mb-3">Definición del producto o servicio y del mercado</h6>
+                            <p class="text-light">
+                                Nuestro producto consiste en desarrollar habilidades avanzadas en ciberseguridad para
+                                mejorar la seguridad de dispositivos móviles y ordenadores. Para ello, implementaremos
+                                una Inteligencia Artificial que protegerá dispositivos y servidores, funcionando de
+                                manera similar a un antivirus o antimalware.
+                            </p>
+                            <p class="text-light">
+                                Este producto está dirigido a cualquier persona que posea un dispositivo
+                                (ordenador, móvil, servidor, etc.). Se expandirá a nivel nacional y estará disponible
+                                tanto para empresas como para clientes individuales.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="modal-footer" style="border-top: 1px solid var(--neon-blue);">
+                    <button type="button" class="btn btn-cyber" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="#contacto" class="btn btn-cyber">Solicitar Servicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Ciberinteligencia -->
+    <div class="modal fade" id="modalCiberinteligencia" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content"
+                style="background: var(--cyber-black); color: white; border: 1px solid var(--neon-blue);">
+
+                <!-- Header -->
+                <div class="modal-header" style="border-bottom: 1px solid var(--neon-blue);">
+                    <h5 class="modal-title" style="color: var(--neon-blue);">Ciberinteligencia</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Body con pestañas -->
+                <div class="modal-body">
+
+                    <!-- Pestañas de navegación -->
+                    <ul class="nav nav-tabs" id="modalTabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="tab" href="#caracteristicas">Características</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#analisis">Análisis Externo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#mercado">Mercado y Clientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#competencia">Competencia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#dafo">Análisis DAFO</a>
+                        </li>
+                    </ul>
+
+                    <!-- Contenido de cada pestaña -->
+                    <div class="tab-content mt-3">
+
+                        <!-- Características -->
+                        <div class="tab-pane fade show active" id="caracteristicas">
+                            <div class="row align-items-center">
+                                <div class="col-md-5 text-center">
+                                    <img src="images/inteligencia.jpg" class="img-fluid rounded shadow mb-3"
+                                        alt="Ciberinteligencia">
+                                </div>
+                                <div class="col-md-7">
+                                    <h6 class="text-white fw-bold">Características del Servicio:</h6>
+                                    <ul class="text-light">
+                                        <li>Monitorización 24/7 de amenazas</li>
+                                        <li>Análisis de tendencias y patrones</li>
+                                        <li>Detección temprana de amenazas</li>
+                                        <li>Informes personalizados</li>
+                                        <li>Alertas en tiempo real</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Análisis Externo -->
+                        <div class="tab-pane fade" id="analisis">
+                            <h6 class="text-white fw-bold">Macroentorno</h6>
+                            <p class="text-light"><strong>Factores económicos:</strong> Baja mano de obra requerida,
+                                impacto de costos por ciberataques.</p>
+                            <p class="text-light"><strong>Factores tecnológicos y socioculturales:</strong> Aumento del
+                                interés en ciberseguridad, trabajo remoto impulsando soluciones digitales.</p>
+                            <p class="text-light"><strong>Factores legales:</strong> Cumplimiento de normativas como
+                                GDPR y CCPA.</p>
+                        </div>
+
+                        <!-- Mercado y Clientes -->
+                        <div class="tab-pane fade" id="mercado">
+                            <h6 class="text-white fw-bold">Segmentación del Mercado</h6>
+                            <p class="text-light"><strong>Clientes Individuales:</strong> Adultos jóvenes (25-40 años),
+                                profesionales tecnológicos, autónomos.</p>
+                            <p class="text-light"><strong>Clientes Corporativos:</strong> PYMES, grandes empresas y
+                                organismos públicos con alta digitalización.</p>
+                        </div>
+
+                        <!-- Competencia -->
+                        <div class="tab-pane fade" id="competencia">
+                            <h6 class="text-white fw-bold">Competencia</h6>
+                            <ul class="text-light">
+                                <li><strong>Palo Alto Networks:</strong> Soluciones premium de ciberseguridad.</li>
+                                <li><strong>Cisco Systems:</strong> Integración con infraestructuras de red.</li>
+                                <li><strong>Fortinet:</strong> Firewall de alto rendimiento.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Análisis DAFO -->
+                        <div class="tab-pane fade" id="dafo">
+                            <h6 class="text-white fw-bold">Análisis DAFO</h6>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6 class="text-success">Fortalezas</h6>
+                                    <ul class="text-light">
+                                        <li>Uso de IA avanzada</li>
+                                        <li>Alta experiencia técnica</li>
+                                        <li>Agilidad y flexibilidad</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-danger">Debilidades</h6>
+                                    <ul class="text-light">
+                                        <li>Limitación de recursos financieros</li>
+                                        <li>Baja notoriedad de marca</li>
+                                        <li>Escalabilidad limitada</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <h6 class="text-primary">Oportunidades</h6>
+                                    <ul class="text-light">
+                                        <li>Creciente demanda por ciberseguridad</li>
+                                        <li>Expansión por el teletrabajo</li>
+                                        <li>Posibles alianzas estratégicas</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-warning">Amenazas</h6>
+                                    <ul class="text-light">
+                                        <li>Competencia intensa</li>
+                                        <li>Rápida evolución de ciberamenazas</li>
+                                        <li>Altos costos de cumplimiento normativo</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="modal-footer" style="border-top: 1px solid var(--neon-blue);">
+                    <button type="button" class="btn btn-cyber" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="#contacto" class="btn btn-cyber">Solicitar Servicio</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Agregar el modal de contacto -->
+    <div class="modal fade" id="modalContacto" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content"
+                style="background: var(--cyber-black); color: white; border: 1px solid var(--neon-blue);">
+                <div class="modal-header" style="border-bottom: 1px solid var(--neon-blue);">
+                    <h5 class="modal-title" style="color: var(--neon-blue);">Contáctanos</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer" style="border-top: 1px solid var(--neon-blue);">
+                    <button type="button" class="btn btn-cyber" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-cyber">Enviar Mensaje</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="text-white">
+        <div class="container text-center">
+            <h3 class="mb-4">CYPHER SECURITY</h3>
+            <p class="mb-4">Líderes en ciberseguridad y protección digital</p>
+            <p>&copy; 2025 Cypher Security. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Contador animado
+        const counters = document.querySelectorAll('.counter');
+
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 2500;
+            const steps = 100;
+            const increment = target / steps;
+
+            let current = 0;
+            const timer = setInterval(() => {
+                current += increment;
+                counter.textContent = Math.round(current);
+
+                if (current >= target) {
+                    counter.textContent = target;
+                    clearInterval(timer);
+                }
+            }, duration / steps);
+        });
+
+        // Efecto Parallax
+        window.addEventListener('scroll', function () {
+            const parallaxSections = document.querySelectorAll('.parallax-section');
+            parallaxSections.forEach(section => {
+                const offset = window.pageYOffset;
+                section.style.backgroundPositionY = offset * 0.7 + 'px';
+            });
+        });
+    </script>
+</body>
+
+</html>

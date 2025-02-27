@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Cypher Security</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<style>
+    /* Aumentar el ancho de las tarjetas */
+    .service-card {
+        background-color: #0056b3;
+        color: white;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        width: 90%;
+        max-width: 1100px;
+    }
+
+
+    .service-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+    }
+</style>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/foto.jpg" class="img-fluid me-2" alt="logo" style="height: 40px;">
+                CYPHER SECURITY
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown me-3"> <!-- Agregada separación -->
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarInicio" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Inicio
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarInicio">
+                            <li><a class="dropdown-item" href="index.html">Principio</a></li>
+                            <li><a class="dropdown-item" href="index.html#por-que-nosotros">¿Por qué nosotros?</a></li>
+                            <li><a class="dropdown-item" href="index.html#proceso">Proceso</a></li>
+                            <li><a class="dropdown-item" href="index.html#testimonios">Nuestros clientes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item me-3"><a class="nav-link" href="Servicios.html">Servicios</a></li>
+                    <!-- Separación -->
+                    <li class="nav-item me-3"><a class="nav-link" href="Nuestraempresa.html">Nuestra empresa</a></li>
+                    <!-- Separación -->
+                </ul>
+                <!-- Espaciado adicional para el botón de contacto -->
+                <a class="nav-link btn-contacto ms-4" href="#" data-bs-toggle="modal" data-bs-target="#modalContacto">
+                    Contacto
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección: Nuestro Equipo -->
+    <section class="team-section py-5">
+        <div class="container text-center">
+            <h2 class="section-title">Conoce a Nuestro Equipo</h2>
+            <p class="lead mb-5">
+                En Cypher Security, el trabajo en equipo y la innovación son fundamentales. Nuestro equipo está
+                compuesto
+                por expertos apasionados en ciberseguridad, quienes trabajan en un ambiente colaborativo y de confianza.
+            </p>
+
+            <div class="row">
+                <!-- Trabajador 1 -->
+                <div class="col-md-4">
+                    <div class="team-card">
+                        <img src="images/fotoperfil.png" alt="Trabajador 1" class="img-fluid rounded-circle mb-3">
+                        <h4>Juan Pérez</h4>
+                        <p>Especialista en Seguridad de Redes</p>
+                    </div>
+                </div>
+
+                <!-- Trabajador 2 -->
+                <div class="col-md-4">
+                    <div class="team-card">
+                        <img src="images/fotoperfil.png" alt="Trabajador 2" class="img-fluid rounded-circle mb-3">
+                        <h4>María González</h4>
+                        <p>Analista de Ciberseguridad</p>
+                    </div>
+                </div>
+
+                <!-- Trabajador 3 -->
+                <div class="col-md-4">
+                    <div class="team-card">
+                        <img src="images/fotoperfil.png" alt="Trabajador 3" class="img-fluid rounded-circle mb-3">
+                        <h4>Carlos Ramírez</h4>
+                        <p>Experto en Inteligencia Artificial</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" style="background-color: var(--cyber-black);">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 style="color: var(--neon-blue);">Respuesta a Emergencias 24/7</h2>
+                    <p class="lead">¿Estás experimentando un incidente de seguridad?</p>
+                    <p>Nuestro equipo de respuesta a incidentes está disponible las 24 horas para ayudarte a mitigar y
+                        resolver cualquier brecha de seguridad.</p>
+                    <div class="d-flex align-items-center mt-4">
+                        <i class="bi bi-telephone"
+                            style="color: var(--neon-blue); font-size: 2rem; margin-right: 1rem;"></i>
+                        <div>
+                            <p class="mb-0">Línea directa de emergencias:</p>
+                            <p class="lead" style="color: var(--neon-blue);">+34 900 555 123</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div
+                        style="border: 2px solid var(--neon-blue); border-radius: 10px; padding: 2rem; background-color: rgba(0, 240, 255, 0.05);">
+                        <h4 style="color: var(--neon-blue);" class="mb-4">Servicios de Emergencia</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><i class="bi bi-shield-check me-2" style="color: var(--neon-blue);"></i>
+                                Contención de incidentes activos</li>
+                            <li class="mb-3"><i class="bi bi-shield-check me-2" style="color: var(--neon-blue);"></i>
+                                Análisis forense en tiempo real</li>
+                            <li class="mb-3"><i class="bi bi-shield-check me-2" style="color: var(--neon-blue);"></i>
+                                Recuperación de sistemas comprometidos</li>
+                            <li class="mb-3"><i class="bi bi-shield-check me-2" style="color: var(--neon-blue);"></i>
+                                Eliminación de malware</li>
+                            <li class="mb-3"><i class="bi bi-shield-check me-2" style="color: var(--neon-blue);"></i>
+                                Asesoramiento legal post-incidente</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Ubicación -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Nuestra Ubicación</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="map-container">
+                        <!-- Placeholder para el mapa -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3226.617048664286!2d-6.942246924276365!3d37.26950427207862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd12703959d03fd9%3A0xd50cb0a4f3ed227c!2sIES%20La%20Marisma!5e0!3m2!1ses!2ses!4v1709048000000"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-4"
+                        style="background-color: var(--cyber-dark); border: 1px solid var(--neon-blue); height: 100%;">
+                        <h4 style="color: var(--neon-blue);" class="mb-4">Oficina Central</h4>
+                        <p><i class="bi bi-geo-alt me-2" style="color: var(--neon-blue);"></i> Avenida Santa Marta
+                            Huelva,Spain</p>
+                        <p><i class="bi bi-telephone me-2" style="color: var(--neon-blue);"></i> +34 900 123 456</p>
+                        <p><i class="bi bi-envelope me-2" style="color: var(--neon-blue);"></i>
+                            contacto@cyphersecurity.com</p>
+
+                        <h5 style="color: var(--neon-blue);" class="mt-4 mb-3">Horario de Atención</h5>
+                        <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                        <p>Sábados: 10:00 AM - 2:00 PM (solo con cita previa)</p>
+                        <p>Domingos: Cerrado</p>
+
+                        <h5 style="color: var(--neon-blue);" class="mt-4 mb-3">Transporte</h5>
+                        <p><i class="bi bi-train me-2" style="color: var(--neon-blue);"></i> Metro: Línea 4, Estación
+                            Seguridad</p>
+                        <p><i class="bi bi-bus-front me-2" style="color: var(--neon-blue);"></i> Autobús: Líneas 34, 56,
+                            78</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de FAQs -->
+    <section class="py-5" style="background-color: #0a192f;">
+        <div class="container">
+            <h2 class="section-title" style="color: #ffffff; text-align: center; margin-bottom: 2rem;">Preguntas
+                Frecuentes</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <!-- FAQ 1 -->
+                    <div class="faq-card"
+                        style="margin-bottom: 1rem; border-radius: 8px; background-color: #112240; overflow: hidden; transition: all 0.3s ease;">
+                        <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq1"
+                            style="padding: 1rem; cursor: pointer; background-color: #1d3a6b; color: #ffffff;">
+                            <h5 style="margin: 0;"><i class="bi bi-question-circle me-2"></i> ¿Cuánto tiempo tarda en
+                                realizarse una evaluación de seguridad?</h5>
+                        </div>
+                        <div id="faq1" class="collapse faq-body" style="padding: 1rem; color: #e0e0e0;">
+                            <p>El tiempo necesario para una evaluación de seguridad completa varía según el tamaño y
+                                complejidad de tu infraestructura. Generalmente, una evaluación básica puede completarse
+                                en 1-2 semanas, mientras que un análisis exhaustivo puede llevar entre 3-4 semanas. Tras
+                                la solicitud inicial, programamos una reunión para determinar el alcance exacto y
+                                proporcionarte un cronograma personalizado.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="faq-card"
+                        style="margin-bottom: 1rem; border-radius: 8px; background-color: #112240; overflow: hidden; transition: all 0.3s ease;">
+                        <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq2"
+                            style="padding: 1rem; cursor: pointer; background-color: #1d3a6b; color: #ffffff;">
+                            <h5 style="margin: 0;"><i class="bi bi-question-circle me-2"></i> ¿Qué debo hacer si detecto
+                                un posible incidente de seguridad?</h5>
+                        </div>
+                        <div id="faq2" class="collapse faq-body" style="padding: 1rem; color: #e0e0e0;">
+                            <p>Si sospechas que estás experimentando un incidente de seguridad, contacta inmediatamente
+                                con nuestra línea de emergencia 24/7 al +34 900 555 123. No apagues los sistemas
+                                afectados, ya que esto podría eliminar evidencias cruciales. Nuestro equipo de respuesta
+                                te guiará sobre los pasos a seguir y, si es necesario, desplegará un equipo en tus
+                                instalaciones para contener y mitigar el incidente.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="faq-card"
+                        style="margin-bottom: 1rem; border-radius: 8px; background-color: #112240; overflow: hidden; transition: all 0.3s ease;">
+                        <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq3"
+                            style="padding: 1rem; cursor: pointer; background-color: #1d3a6b; color: #ffffff;">
+                            <h5 style="margin: 0;"><i class="bi bi-question-circle me-2"></i> ¿Ofrecen servicios para
+                                pequeñas empresas?</h5>
+                        </div>
+                        <div id="faq3" class="collapse faq-body" style="padding: 1rem; color: #e0e0e0;">
+                            <p>Sí, tenemos soluciones específicamente diseñadas para pequeñas y medianas empresas.
+                                Entendemos que cada organización tiene diferentes necesidades y presupuestos, por lo que
+                                ofrecemos paquetes escalables que se adaptan a empresas de todos los tamaños. Nuestro
+                                objetivo es proporcionar seguridad de nivel empresarial a precios accesibles para
+                                negocios en crecimiento.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="faq-card"
+                        style="margin-bottom: 1rem; border-radius: 8px; background-color: #112240; overflow: hidden; transition: all 0.3s ease;">
+                        <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq4"
+                            style="padding: 1rem; cursor: pointer; background-color: #1d3a6b; color: #ffffff;">
+                            <h5 style="margin: 0;"><i class="bi bi-question-circle me-2"></i> ¿Cuáles son los primeros
+                                pasos para mejorar la ciberseguridad de mi empresa?</h5>
+                        </div>
+                        <div id="faq4" class="collapse faq-body" style="padding: 1rem; color: #e0e0e0;">
+                            <p>Recomendamos comenzar con una evaluación inicial de seguridad para identificar
+                                vulnerabilidades críticas. A partir de ahí, implementamos un plan por fases que incluye:
+                                formación del personal, fortalecimiento de contraseñas, configuración de firewalls,
+                                implementación de autenticación de dos factores, cifrado de datos sensibles y desarrollo
+                                de políticas de seguridad. Nuestro enfoque se basa en priorizar las acciones que ofrecen
+                                mayor protección con la menor interrupción de tus operaciones diarias.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="faq-card"
+                        style="margin-bottom: 1rem; border-radius: 8px; background-color: #112240; overflow: hidden; transition: all 0.3s ease;">
+                        <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq5"
+                            style="padding: 1rem; cursor: pointer; background-color: #1d3a6b; color: #ffffff;">
+                            <h5 style="margin: 0;"><i class="bi bi-question-circle me-2"></i> ¿Realizan formación para
+                                empleados?</h5>
+                        </div>
+                        <div id="faq5" class="collapse faq-body" style="padding: 1rem; color: #e0e0e0;">
+                            <p>Sí, ofrecemos programas completos de formación y concienciación en ciberseguridad para
+                                empleados. Estos programas incluyen sesiones presenciales, webinars, simulaciones de
+                                phishing, materiales educativos y evaluaciones periódicas. La formación se personaliza
+                                según el nivel técnico de los participantes y las amenazas específicas de tu sector.
+                                Consideramos que el factor humano es crucial en cualquier estrategia de seguridad
+                                efectiva.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Final -->
+    <section class="py-5"
+        style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('/api/placeholder/1920/600'); background-size: cover;">
+        <div class="container text-center py-4">
+            <h2 class="display-5 mb-4" style="color: var(--neon-blue);">¿Listo para fortalecer tu seguridad digital?
+            </h2>
+            <p class="lead mb-4">Contáctanos hoy y da el primer paso hacia una protección integral</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="d-grid gap-2">
+                        <a href="#contacto" class="btn btn-cyber btn-lg">Solicitar Evaluación Gratuita</a>
+                        <p class="mt-3">o llámanos al +34 900 123 456</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agregar el modal de contacto -->
+    <div class="modal fade" id="modalContacto" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content"
+                style="background: var(--cyber-black); color: white; border: 1px solid var(--neon-blue);">
+                <div class="modal-header" style="border-bottom: 1px solid var(--neon-blue);">
+                    <h5 class="modal-title" style="color: var(--neon-blue);">Contáctanos</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer" style="border-top: 1px solid var(--neon-blue);">
+                    <button type="button" class="btn btn-cyber" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-cyber">Enviar Mensaje</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-4">
+        <p>&copy; 2025 Cypher Security. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Contador animado
+        const counters = document.querySelectorAll('.counter');
+
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 2500;
+            const steps = 100;
+            const increment = target / steps;
+
+            let current = 0;
+            const timer = setInterval(() => {
+                current += increment;
+                counter.textContent = Math.round(current);
+
+                if (current >= target) {
+                    counter.textContent = target;
+                    clearInterval(timer);
+                }
+            }, duration / steps);
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const faqs = document.querySelectorAll(".faq-header");
+
+            faqs.forEach(faq => {
+                faq.addEventListener("click", function () {
+                    setTimeout(() => {
+                        window.scrollBy(0, 1); // Fuerza un repintado para mejorar la fluidez
+                    }, 50);
+                });
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let currentLocation = window.location.pathname.split("/").pop(); // Obtiene la página actual
+            let menuItems = document.querySelectorAll(".navbar-nav .nav-link"); // Enlaces principales del navbar
+            let inicioDropdown = document.querySelector("#navbarInicio"); // Botón de "Inicio"
+            let dropdownLinks = document.querySelectorAll(".dropdown-menu .dropdown-item"); // Submenús de "Inicio"
+
+            menuItems.forEach((item) => {
+                let itemHref = item.getAttribute("href");
+                if (itemHref === currentLocation) {
+                    item.classList.add("active"); // Marca activo el enlace principal
+                }
+            });
+
+            dropdownLinks.forEach((subItem) => {
+                let subHref = subItem.getAttribute("href");
+                if (subHref.includes(currentLocation) && currentLocation !== "") {
+                    inicioDropdown.classList.add("active"); // Solo marca "Inicio", NO los submenús
+                }
+            });
+        });
+
+
+
+    </script>
+</body>
+
+</html>
